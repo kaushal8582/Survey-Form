@@ -25,7 +25,7 @@ const useFormValidation = (formData) => {
       if (!formData.progrmmingLanguage) {
         errors.progrmmingLanguage = 'Favorite Programming Language is required';
       }
-      if (!formData.yearOfExperience) {
+      if (formData.yearOfExperience =="" || formData.yearOfExperience < 0) {
         errors.yearOfExperience = 'Years of Experience is required';
       }
     }
